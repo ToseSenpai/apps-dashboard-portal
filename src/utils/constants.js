@@ -1,0 +1,31 @@
+// Costanti applicazione
+
+// URL del file di configurazione applicativi
+export const APPS_JSON_URL = '/apps.json';
+
+// Titolo applicazione
+export const APP_TITLE = 'Portale Applicativi';
+export const APP_SUBTITLE = 'Dashboard per la gestione dei software aziendali';
+
+// Breakpoints responsive (in pixel)
+export const BREAKPOINTS = {
+  mobile: 480,
+  tablet: 768,
+  desktop: 1024,
+  wide: 1440,
+};
+
+// Messaggi di errore
+export const ERROR_MESSAGES = {
+  FETCH_FAILED: 'Impossibile caricare i dati degli applicativi. Riprova più tardi.',
+  NETWORK_ERROR: 'Errore di connessione. Verifica la tua connessione internet.',
+  PARSE_ERROR: 'Errore nel caricamento dei dati. Contatta il supporto tecnico.',
+};
+
+// Label ARIA per accessibilità
+export const ARIA_LABELS = {
+  DOWNLOAD_BUTTON: 'Scarica applicativo',
+  CHANGELOG_LINK: 'Visualizza note di rilascio',
+  APP_CARD: 'Scheda applicativo',
+  MAIN_CONTAINER: 'Contenitore principale applicativi',
+};
