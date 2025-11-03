@@ -6,7 +6,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-xl);
+  gap: var(--spacing-lg);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -73,7 +73,7 @@
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
   }
 }
 
@@ -81,19 +81,19 @@
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
   }
 
   .emptyState {
-    padding: var(--spacing-2xl);
-    min-height: 300px;
+    padding: var(--spacing-xl);
+    min-height: 250px;
   }
 
   .emptyState i {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .emptyState p {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
   }
 }
