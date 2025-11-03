@@ -1,7 +1,8 @@
 // Costanti applicazione
 
 // URL del file di configurazione applicativi
-export const APPS_JSON_URL = '/apps.json';
+// Usa import.meta.env.BASE_URL per supportare sia sviluppo che produzione
+export const APPS_JSON_URL = `${import.meta.env.BASE_URL}apps.json`;
 
 // Titolo applicazione
 export const APP_TITLE = 'Portale Applicativi';
