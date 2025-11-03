@@ -5,8 +5,8 @@
 export const APPS_JSON_URL = `${import.meta.env.BASE_URL}apps.json`;
 
 // Titolo applicazione
-export const APP_TITLE = 'Portale Applicativi';
-export const APP_SUBTITLE = 'Dashboard per la gestione dei software aziendali';
+export const APP_TITLE = 'DHL Tools Portal';
+export const APP_SUBTITLE = 'Strumenti professionali per operazioni DHL';
 
 // Breakpoints responsive (in pixel)
 export const BREAKPOINTS = {

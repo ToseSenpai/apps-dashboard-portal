@@ -1,32 +1,32 @@
 [
   {
     "id": "app-001",
-    "name": "Applicativo Gestionale",
-    "icon": "fas fa-briefcase",
-    "version": "2.5.1",
-    "lastUpdate": "2025-01-15",
-    "downloadUrl": "https://example.com/downloads/gestionale-v2.5.1.zip",
-    "changelogUrl": "https://example.com/changelog/gestionale",
-    "description": "Sistema completo per la gestione delle operazioni aziendali, inclusi ordini, fatturazione e inventario."
+    "name": "Generatore Bollettini",
+    "icon": "fas fa-file-invoice",
+    "version": "1.0.0",
+    "lastUpdate": "2025-11-03",
+    "downloadUrl": "https://github.com/ToseSenpai/bollettini/releases",
+    "changelogUrl": "https://github.com/ToseSenpai/bollettini/releases",
+    "description": "Strumento per la generazione automatica di bollettini DHL con template personalizzabili e esportazione multipla."
   },
   {
     "id": "app-002",
-    "name": "CRM Aziendale",
-    "icon": "fas fa-users",
-    "version": "1.8.3",
-    "lastUpdate": "2025-01-10",
-    "downloadUrl": "https://example.com/downloads/crm-v1.8.3.zip",
-    "changelogUrl": "https://example.com/changelog/crm",
-    "description": "Piattaforma per la gestione delle relazioni con i clienti, tracking opportunità e reportistica avanzata."
+    "name": "Cerca MRN",
+    "icon": "fas fa-search",
+    "version": "1.0.0",
+    "lastUpdate": "2025-11-03",
+    "downloadUrl": "#",
+    "changelogUrl": "#",
+    "description": "Sistema di ricerca avanzata per Movement Reference Number (MRN) nelle spedizioni internazionali DHL."
   },
   {
     "id": "app-003",
-    "name": "Tool Reporting",
-    "icon": "fas fa-chart-line",
-    "version": "3.2.0",
-    "lastUpdate": "2025-01-20",
-    "downloadUrl": "https://example.com/downloads/reporting-v3.2.0.zip",
-    "changelogUrl": "https://example.com/changelog/reporting",
-    "description": "Strumento avanzato per la generazione di report personalizzati e dashboard analytics in tempo reale."
+    "name": "NOS Check",
+    "icon": "fas fa-clipboard-check",
+    "version": "1.0.0",
+    "lastUpdate": "2025-11-03",
+    "downloadUrl": "#",
+    "changelogUrl": "#",
+    "description": "Tool di verifica e validazione per Number of Shipments (NOS) con controlli automatizzati e reporting."
   }
 ]

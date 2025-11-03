@@ -1,63 +1,74 @@
 :root {
-  /* Tema Corporate Microsoft 365 */
+  /* DHL Professional Theme */
 
-  /* Colori Primari */
-  --color-primary: #0078D4;
-  --color-primary-dark: #106EBE;
-  --color-primary-light: #50A5E6;
+  /* Colori Brand DHL */
+  --color-primary: #D40511;        /* DHL Red - Primary actions */
+  --color-primary-dark: #A00409;   /* DHL Red Dark - Hover states */
+  --color-primary-light: #E53946;  /* DHL Red Light - Accents */
 
-  /* Colori Secondari */
-  --color-secondary: #605E5C;
-  --color-text: #323130;
-  --color-text-light: #797775;
+  --color-secondary: #FFCC00;      /* DHL Yellow - Highlights */
+  --color-secondary-dark: #E6B800; /* DHL Yellow Dark */
+  --color-secondary-light: #FFD633; /* DHL Yellow Light */
+
+  /* Colori Testo */
+  --color-text: #1A1A1A;          /* Deep black for maximum readability */
+  --color-text-light: #666666;    /* Medium gray for secondary text */
+  --color-text-muted: #999999;    /* Light gray for tertiary text */
 
   /* Background */
-  --color-bg-primary: #FAFAFA;
-  --color-bg-secondary: #FFFFFF;
-  --color-bg-hover: #F3F2F1;
+  --color-bg-primary: #F5F5F5;    /* Elegant light gray background */
+  --color-bg-secondary: #FFFFFF;  /* Pure white for cards */
+  --color-bg-hover: #FAFAFA;      /* Subtle hover background */
+  --color-bg-accent: #FFF9E6;     /* Yellow tinted background */
 
   /* Bordi e Divisori */
-  --color-border: #EDEBE9;
-  --color-border-dark: #D2D0CE;
+  --color-border: #E0E0E0;        /* Light border */
+  --color-border-dark: #CCCCCC;   /* Medium border */
+  --color-border-light: #F0F0F0;  /* Very light border */
 
   /* Stati */
-  --color-success: #107C10;
-  --color-error: #D13438;
-  --color-warning: #FF8C00;
-  --color-info: #0078D4;
+  --color-success: #28A745;       /* Green for success */
+  --color-error: #D40511;         /* DHL Red for errors */
+  --color-warning: #FFCC00;       /* DHL Yellow for warnings */
+  --color-info: #0066CC;          /* Blue for info */
 
-  /* Ombre */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
-  --shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.15);
+  /* Ombre - Più profonde e eleganti */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.16);
+  --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 12px 28px rgba(212, 5, 17, 0.15);  /* Red tinted shadow */
 
-  /* Typography */
-  --font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --font-size-xs: 0.75rem;    /* 12px */
-  --font-size-sm: 0.875rem;   /* 14px */
-  --font-size-base: 1rem;     /* 16px */
-  --font-size-lg: 1.125rem;   /* 18px */
-  --font-size-xl: 1.25rem;    /* 20px */
-  --font-size-2xl: 1.5rem;    /* 24px */
+  /* Typography - Modern and Professional */
+  --font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-xl: 1.375rem;    /* 22px */
+  --font-size-2xl: 1.75rem;    /* 28px */
+  --font-size-3xl: 2.25rem;    /* 36px */
 
-  /* Spacing */
-  --spacing-xs: 0.25rem;   /* 4px */
-  --spacing-sm: 0.5rem;    /* 8px */
-  --spacing-md: 1rem;      /* 16px */
-  --spacing-lg: 1.5rem;    /* 24px */
-  --spacing-xl: 2rem;      /* 32px */
-  --spacing-2xl: 3rem;     /* 48px */
+  /* Spacing - Più generoso per eleganza */
+  --spacing-xs: 0.25rem;    /* 4px */
+  --spacing-sm: 0.5rem;     /* 8px */
+  --spacing-md: 1rem;       /* 16px */
+  --spacing-lg: 1.5rem;     /* 24px */
+  --spacing-xl: 2rem;       /* 32px */
+  --spacing-2xl: 3rem;      /* 48px */
+  --spacing-3xl: 4rem;      /* 64px */
 
-  /* Border Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  /* Border Radius - Più generoso */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;    /* For circular elements */
 
-  /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition-base: 300ms ease;
-  --transition-slow: 500ms ease;
+  /* Transitions - Più fluide */
+  --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Breakpoints (per riferimento JS) */
   --breakpoint-mobile: 480px;
