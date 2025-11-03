@@ -1,6 +1,6 @@
 # Dipendenze
 node_modules/
-package-lock.json
+# package-lock.json è necessario per GitHub Actions CI
 yarn.lock
 pnpm-lock.yaml
 
