@@ -25,8 +25,8 @@
     "icon": "fas fa-clipboard-check",
     "version": "1.0.0",
     "lastUpdate": "2025-11-03",
-    "downloadUrl": "#",
-    "changelogUrl": "#",
+    "downloadUrl": "https://github.com/ToseSenpai/ControlloStatoNSIS/releases",
+    "changelogUrl": "https://github.com/ToseSenpai/ControlloStatoNSIS/releases",
     "description": "Tool di verifica e validazione per Number of Shipments (NOS) con controlli automatizzati e reporting."
   }
 ]
