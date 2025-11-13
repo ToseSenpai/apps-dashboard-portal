@@ -28,5 +28,15 @@
     "downloadUrl": "https://github.com/ToseSenpai/ControlloStatoNSIS/releases",
     "changelogUrl": "https://github.com/ToseSenpai/ControlloStatoNSIS/releases",
     "description": "Tool di verifica e validazione per Number of Shipments (NOS) con controlli automatizzati e reporting."
+  },
+  {
+    "id": "app-004",
+    "name": "Auto-T1",
+    "icon": "fas fa-bolt",
+    "version": "1.0.0",
+    "lastUpdate": "2025-11-13",
+    "downloadUrl": "https://github.com/ToseSenpai/Auto-T1/releases",
+    "changelogUrl": "https://github.com/ToseSenpai/Auto-T1/releases",
+    "description": "Sistema di automazione avanzata per la gestione T1 con elaborazione batch e monitoraggio in tempo reale."
   }
 ]

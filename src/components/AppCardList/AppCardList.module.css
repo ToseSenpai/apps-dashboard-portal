@@ -5,8 +5,8 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-lg);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -27,6 +27,10 @@
 
 .gridItem:nth-child(3) {
   animation-delay: 0.3s;
+}
+
+.gridItem:nth-child(4) {
+  animation-delay: 0.4s;
 }
 
 @keyframes fadeInUp {
@@ -68,6 +72,15 @@
 }
 
 /* Responsive Grid */
+
+/* Large Desktop: 4 columns (default above) */
+
+/* Desktop/Tablet: 3 colonne */
+@media (max-width: 1400px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 /* Tablet: 2 colonne */
 @media (max-width: 1024px) {
