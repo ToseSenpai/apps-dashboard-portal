@@ -3,74 +3,95 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-2xl);
+  padding: var(--spacing-3xl);
   margin: 0 auto;
-  max-width: 600px;
-  min-height: 300px;
+  max-width: 700px;
+  min-height: 400px;
   text-align: center;
-  background-color: var(--color-bg-secondary);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-border-light);
-  box-shadow: var(--shadow-sm);
+  background: var(--gradient-card);
+  backdrop-filter: blur(var(--blur-md));
+  -webkit-backdrop-filter: blur(var(--blur-md));
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+  animation: slide-up 0.4s ease-out;
 }
 
 .errorIcon {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
-  background-color: var(--color-error);
-  border-radius: var(--radius-full);
-  margin-bottom: var(--spacing-lg);
-  box-shadow: 0 3px 10px rgba(212, 5, 17, 0.2);
+  background: linear-gradient(135deg, var(--color-error) 0%, #DC2626 100%);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
+  animation: pulse-glow 2s ease-in-out infinite;
 }
 
 .errorTitle {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-2xl);
   color: var(--color-text);
   margin-bottom: var(--spacing-md);
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .errorMessage {
   font-size: var(--font-size-base);
   color: var(--color-text-light);
-  margin-bottom: var(--spacing-xl);
-  line-height: 1.6;
-  max-width: 500px;
+  margin-bottom: var(--spacing-2xl);
+  line-height: 1.7;
+  max-width: 550px;
 }
 
 .retryButton {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-xs);
-  padding: var(--spacing-sm) var(--spacing-xl);
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-2xl);
+  background: var(--gradient-primary);
   color: white;
   border: none;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   font-size: var(--font-size-sm);
   font-weight: 700;
   cursor: pointer;
   transition: all var(--transition-base);
-  box-shadow: 0 2px 8px rgba(212, 5, 17, 0.2);
+  box-shadow: var(--shadow-glow-blue);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  position: relative;
+  overflow: hidden;
+}
+
+.retryButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left var(--transition-slow);
+}
+
+.retryButton:hover::before {
+  left: 100%;
 }
 
 .retryButton:hover {
-  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
-  box-shadow: 0 4px 12px rgba(212, 5, 17, 0.3);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+  box-shadow: 0 8px 20px rgba(0, 120, 212, 0.4);
+  transform: translateY(-3px);
 }
 
 .retryButton:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(212, 5, 17, 0.2);
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: var(--shadow-glow-blue);
 }
 
 .retryButton i {
