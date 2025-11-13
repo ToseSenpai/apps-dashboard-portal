@@ -1,43 +1,52 @@
 :root {
-  /* DHL Professional Theme */
+  /* Windows 11 Modern Design System */
 
-  /* Colori Brand DHL */
-  --color-primary: #D40511;        /* DHL Red - Primary actions */
-  --color-primary-dark: #A00409;   /* DHL Red Dark - Hover states */
-  --color-primary-light: #E53946;  /* DHL Red Light - Accents */
+  /* Accent Colors - Windows 11 Inspired */
+  --color-primary: #0078D4;        /* Windows 11 Blue - Primary actions */
+  --color-primary-dark: #106EBE;   /* Windows 11 Blue Dark - Hover states */
+  --color-primary-light: #4A9EE0;  /* Windows 11 Blue Light - Accents */
 
-  --color-secondary: #FFCC00;      /* DHL Yellow - Highlights */
-  --color-secondary-dark: #E6B800; /* DHL Yellow Dark */
-  --color-secondary-light: #FFD633; /* DHL Yellow Light */
+  --color-secondary: #8E8CD8;      /* Purple - Secondary gradient */
+  --color-secondary-dark: #7B78C8; /* Purple Dark */
+  --color-secondary-light: #A8A6E8; /* Purple Light */
 
-  /* Colori Testo */
-  --color-text: #1A1A1A;          /* Deep black for maximum readability */
-  --color-text-light: #666666;    /* Medium gray for secondary text */
-  --color-text-muted: #999999;    /* Light gray for tertiary text */
+  --color-accent-cyan: #00B7C3;    /* Cyan - Info highlights */
+  --color-accent-orange: #D83B01;  /* Orange - Warning/Special actions */
 
-  /* Background */
-  --color-bg-primary: #F5F5F5;    /* Elegant light gray background */
-  --color-bg-secondary: #FFFFFF;  /* Pure white for cards */
-  --color-bg-hover: #FAFAFA;      /* Subtle hover background */
-  --color-bg-accent: #FFF9E6;     /* Yellow tinted background */
+  /* Colori Testo - Modern Dark/Light */
+  --color-text: #FFFFFF;          /* White for dark backgrounds */
+  --color-text-light: #9CA3AF;    /* Gray-400 for secondary text */
+  --color-text-muted: #6B7280;    /* Gray-500 for tertiary text */
+  --color-text-dark: #1A1A1A;     /* Dark text for light backgrounds */
 
-  /* Bordi e Divisori */
-  --color-border: #E0E0E0;        /* Light border */
-  --color-border-dark: #CCCCCC;   /* Medium border */
-  --color-border-light: #F0F0F0;  /* Very light border */
+  /* Dark Backgrounds - Windows 11 Dark Mode */
+  --color-bg-primary: #0A0C0F;    /* Dark-950 - Deepest dark */
+  --color-bg-secondary: #111318;  /* Dark-900 - Primary dark */
+  --color-bg-tertiary: #1A1D23;   /* Dark-850 - Medium dark */
+  --color-bg-card: #1F2937;       /* Gray-800 - Card backgrounds */
+  --color-bg-hover: rgba(55, 65, 81, 0.5);  /* Gray-700/50 - Hover state */
+  --color-bg-accent: rgba(0, 120, 212, 0.1); /* Blue tinted background */
+
+  /* Bordi e Divisori - Subtle on dark */
+  --color-border: rgba(75, 85, 99, 0.3);     /* Gray-600/30 */
+  --color-border-dark: rgba(55, 65, 81, 0.5); /* Gray-700/50 */
+  --color-border-light: rgba(107, 114, 128, 0.2); /* Gray-500/20 */
 
   /* Stati */
-  --color-success: #28A745;       /* Green for success */
-  --color-error: #D40511;         /* DHL Red for errors */
-  --color-warning: #FFCC00;       /* DHL Yellow for warnings */
-  --color-info: #0066CC;          /* Blue for info */
+  --color-success: #10B981;       /* Green-500 for success */
+  --color-error: #EF4444;         /* Red-500 for errors */
+  --color-warning: #F59E0B;       /* Amber-500 for warnings */
+  --color-info: #3B82F6;          /* Blue-500 for info */
 
-  /* Ombre - Più profonde e eleganti */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.16);
-  --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.2);
-  --shadow-hover: 0 12px 28px rgba(212, 5, 17, 0.15);  /* Red tinted shadow */
+  /* Ombre - Modern with glow effects */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.25);
+  --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 12px 28px rgba(0, 120, 212, 0.25);  /* Blue glow */
+  --shadow-glow-blue: 0 0 20px rgba(59, 130, 246, 0.3);
+  --shadow-glow-purple: 0 0 20px rgba(142, 140, 216, 0.3);
+  --shadow-inner-soft: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 
   /* Typography - Modern and Professional */
   --font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
@@ -65,10 +74,23 @@
   --radius-xl: 20px;
   --radius-full: 9999px;    /* For circular elements */
 
-  /* Transitions - Più fluide */
+  /* Transitions - Smooth and modern */
   --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Gradients - Windows 11 Style */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-dark) 100%);
+  --gradient-accent: linear-gradient(90deg, var(--color-primary) 0%, var(--color-info) 50%, var(--color-secondary) 100%);
+  --gradient-text: linear-gradient(90deg, #60A5FA 0%, #93C5FD 50%, #A78BFA 100%);
+  --gradient-bg-dark: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 50%, var(--color-bg-tertiary) 100%);
+  --gradient-card: linear-gradient(135deg, rgba(31, 41, 55, 0.5) 0%, rgba(31, 41, 55, 0.3) 100%);
+
+  /* Backdrop Blur */
+  --blur-sm: 4px;
+  --blur-md: 8px;
+  --blur-lg: 12px;
 
   /* Breakpoints (per riferimento JS) */
   --breakpoint-mobile: 480px;
