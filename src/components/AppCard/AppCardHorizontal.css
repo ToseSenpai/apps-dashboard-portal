@@ -1,0 +1,419 @@
+/* AppCardHorizontal - Steam Style Horizontal Card */
+.app-card-h {
+  display: flex;
+  gap: var(--spacing-lg);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  animation: fade-in 0.3s ease-out;
+}
+
+.app-card-h:hover {
+  background: var(--color-bg-hover);
+  border-color: var(--color-border-light);
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(102, 192, 244, 0.15);
+}
+
+/* Cover Image Section */
+.app-card-h__cover {
+  position: relative;
+  width: 280px;
+  min-width: 280px;
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Download Badge */
+.app-card-h__download-badge {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: rgba(102, 192, 244, 0.95);
+  border: 1px solid rgba(102, 192, 244, 1);
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  animation: pulse-download 2s ease-in-out infinite;
+}
+
+.app-card-h__download-badge i {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes pulse-download {
+  0%, 100% {
+    box-shadow: 0 2px 8px rgba(102, 192, 244, 0.3);
+  }
+  50% {
+    box-shadow: 0 2px 12px rgba(102, 192, 244, 0.6);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+.app-card-h__cover-icon {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.app-card-h__cover-icon i {
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+}
+
+/* Progress Bar */
+.app-card-h__progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.app-card-h__progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+  transition: width var(--transition-normal);
+}
+
+/* Content Section */
+.app-card-h__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) 0;
+  min-width: 0; /* Fix for text overflow */
+}
+
+/* Header */
+.app-card-h__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.app-card-h__title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.app-card-h__badges {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+}
+
+.app-card-h__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 2px var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.app-card-h__badge--running {
+  background: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.app-card-h__badge--running i {
+  font-size: 6px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.app-card-h__badge--installed {
+  background: rgba(102, 192, 244, 0.15);
+  color: var(--color-primary);
+  border: 1px solid rgba(102, 192, 244, 0.3);
+}
+
+.app-card-h__badge--update {
+  background: rgba(255, 152, 0, 0.15);
+  color: #ff9800;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+/* Description */
+.app-card-h__description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  margin: 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Download Progress Info */
+.app-card-h__download-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) 0;
+  margin: var(--spacing-sm) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(102, 192, 244, 0.05);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 3px;
+}
+
+.app-card-h__download-size {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-primary);
+  letter-spacing: 0.3px;
+}
+
+.app-card-h__download-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+}
+
+.app-card-h__download-speed {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.app-card-h__download-speed i {
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+}
+
+.app-card-h__download-time {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-text-light);
+  font-weight: 400;
+}
+
+.app-card-h__download-time i {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+/* Meta Info */
+.app-card-h__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.app-card-h__meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.app-card-h__meta-item i {
+  color: var(--color-text-muted);
+}
+
+/* Actions Section */
+.app-card-h__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  padding-left: 0;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Buttons */
+.app-card-h__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.app-card-h__btn:hover {
+  background: var(--color-bg-hover);
+  border-color: var(--color-border-light);
+  transform: translateY(-1px);
+}
+
+.app-card-h__btn:active {
+  transform: translateY(0);
+}
+
+/* Primary Button */
+.app-card-h__btn--primary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-xl);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  border: 1px solid var(--color-primary-dark);
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: var(--font-size-base);
+  font-family: var(--font-family);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.app-card-h__btn--primary:hover {
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 192, 244, 0.3);
+}
+
+.app-card-h__btn--primary:active {
+  transform: translateY(0);
+}
+
+.app-card-h__btn--primary.app-card-h__btn--disabled {
+  background: var(--color-bg-tertiary);
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.app-card-h__btn--primary.app-card-h__btn--disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Icon Button */
+.app-card-h__btn--icon {
+  padding: var(--spacing-sm);
+  min-width: auto;
+  aspect-ratio: 1;
+}
+
+/* Secondary Actions */
+.app-card-h__secondary {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .app-card-h__cover {
+    width: 220px;
+    min-width: 220px;
+    height: 110px;
+  }
+
+  .app-card-h__cover-icon {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-card-h {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .app-card-h__cover {
+    width: 100%;
+    height: 180px;
+  }
+
+  .app-card-h__content {
+    padding: 0 var(--spacing-md);
+  }
+
+  .app-card-h__actions {
+    flex-direction: row;
+    padding: var(--spacing-md);
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .app-card-h__btn--primary {
+    flex: 1;
+  }
+
+  .app-card-h__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

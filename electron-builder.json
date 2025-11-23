@@ -1,0 +1,46 @@
+{
+  "appId": "com.azienda.appslauncher",
+  "productName": "Apps Launcher",
+  "directories": {
+    "output": "release",
+    "buildResources": "build"
+  },
+  "files": [
+    "dist/**/*",
+    "electron/main/**/*",
+    "electron/preload/**/*",
+    "public/apps.json",
+    "package.json"
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "public/vite.svg",
+    "artifactName": "${productName}-Setup-${version}.${ext}",
+    "publisherName": "Azienda",
+    "fileAssociations": []
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "perMachine": false,
+    "allowElevation": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "Apps Launcher",
+    "installerIcon": "public/vite.svg",
+    "uninstallerIcon": "public/vite.svg",
+    "installerHeaderIcon": "public/vite.svg",
+    "deleteAppDataOnUninstall": false
+  },
+  "extraResources": [
+    {
+      "from": "public/apps.json",
+      "to": "apps.json"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+/* FilterBar - Steam Style Tabs */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacing-xl);
+  background: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.filter-bar__tabs {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.filter-bar__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.filter-bar__tab:hover {
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.filter-bar__tab--active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.filter-bar__tab--active:hover {
+  background: rgba(102, 192, 244, 0.05);
+}
+
+.filter-bar__tab i {
+  font-size: var(--font-size-sm);
+}
+
+.filter-bar__tab-label {
+  white-space: nowrap;
+}
+
+.filter-bar__tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 var(--spacing-xs);
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.filter-bar__tab--active .filter-bar__tab-count {
+  background: rgba(102, 192, 244, 0.2);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filter-bar {
+    padding: 0 var(--spacing-md);
+    overflow-x: auto;
+  }
+
+  .filter-bar__tabs {
+    min-width: max-content;
+  }
+
+  .filter-bar__tab {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-xs);
+  }
+
+  .filter-bar__tab-label {
+    display: none;
+  }
+
+  .filter-bar__tab i {
+    font-size: var(--font-size-base);
+  }
+}

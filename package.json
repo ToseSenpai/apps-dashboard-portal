@@ -1,16 +1,25 @@
 {
-  "name": "apps-dashboard-portal",
+  "name": "apps-launcher",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "description": "Launcher desktop per applicazioni aziendali con gestione installazione e aggiornamenti",
+  "author": "Azienda",
+  "main": "out/main/index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "electron-vite dev",
+    "build": "electron-vite build && electron-builder",
+    "build:dir": "electron-vite build && electron-builder --dir",
+    "build:win": "electron-vite build && electron-builder --win",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "electron-vite preview",
+    "package": "npm run build",
+    "package:win": "npm run build:win"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
+    "adm-zip": "^0.5.16",
+    "dotenv": "^17.2.3",
+    "electron-store": "^8.2.0",
     "prop-types": "^15.8.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
@@ -20,10 +29,15 @@
     "@types/react": "^19.1.16",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.4",
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3",
+    "electron-vite": "^4.0.1",
     "eslint": "^9.36.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.22",
     "globals": "^16.4.0",
-    "vite": "^7.1.7"
+    "vite": "^7.1.7",
+    "vite-plugin-electron": "^0.28.8",
+    "vite-plugin-electron-renderer": "^0.14.6"
   }
 }

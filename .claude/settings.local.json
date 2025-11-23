@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(powershell -Command \"Get-ChildItem Env:ELECTRON_RUN_AS_NODE\")",
+      "Bash(powershell -Command:*)",
+      "Bash(cmd /c \"set ELECTRON_RUN_AS_NODE= && npm run dev\")",
+      "Bash(./start-dev.bat)",
+      "Bash(curl:*)",
+      "Bash(npx vite:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(timeout /t 10 /nobreak)",
+      "Bash(ping:*)",
+      "Bash(nul)",
+      "Bash(cat:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

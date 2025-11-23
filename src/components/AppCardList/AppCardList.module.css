@@ -3,34 +3,43 @@
   padding: 0;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+/* Steam-style Vertical List */
+.list {
+  display: flex;
+  flex-direction: column;
   gap: var(--spacing-md);
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.gridItem {
+.listItem {
   display: flex;
-  animation: fadeInUp 0.5s ease-out backwards;
+  animation: fadeInUp 0.4s ease-out backwards;
 }
 
-.gridItem:nth-child(1) {
+.listItem:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.listItem:nth-child(2) {
   animation-delay: 0.1s;
 }
 
-.gridItem:nth-child(2) {
+.listItem:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.listItem:nth-child(4) {
   animation-delay: 0.2s;
 }
 
-.gridItem:nth-child(3) {
-  animation-delay: 0.3s;
+.listItem:nth-child(5) {
+  animation-delay: 0.25s;
 }
 
-.gridItem:nth-child(4) {
-  animation-delay: 0.4s;
+.listItem:nth-child(6) {
+  animation-delay: 0.3s;
 }
 
 @keyframes fadeInUp {
@@ -71,30 +80,10 @@
   font-weight: 500;
 }
 
-/* Responsive Grid */
-
-/* Large Desktop: 4 columns (default above) */
-
-/* Desktop/Tablet: 3 colonne */
-@media (max-width: 1400px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Tablet: 2 colonne */
-@media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md);
-  }
-}
-
-/* Mobile: 1 colonna */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+  .list {
+    gap: var(--spacing-sm);
   }
 
   .emptyState {

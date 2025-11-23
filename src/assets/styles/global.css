@@ -164,6 +164,38 @@ body.iframe-mode {
   }
 }
 
+/* Steam-style animations */
+@keyframes steam-glow {
+  0%, 100% {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 0 rgba(102, 192, 244, 0);
+  }
+  50% {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 0 20px rgba(102, 192, 244, 0.3);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 /* Animation Classes */
 .animate-fade-in {
   animation: fade-in 0.3s ease-out;
@@ -213,11 +245,10 @@ body.iframe-mode {
 
 /* ===== UTILITY CLASSES ===== */
 
-/* Glassmorphism Effect */
-.glass-effect {
-  background: rgba(31, 41, 55, 0.5);
-  backdrop-filter: blur(var(--blur-sm));
-  -webkit-backdrop-filter: blur(var(--blur-sm));
+/* Steam Card Effect (no glassmorphism) */
+.steam-card-effect {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
 }
 
 /* Gradient Text */

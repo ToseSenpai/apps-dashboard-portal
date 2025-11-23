@@ -1,55 +1,55 @@
 :root {
-  /* Windows 11 Modern Design System */
+  /* Steam Design System */
 
-  /* Accent Colors - Windows 11 Inspired */
-  --color-primary: #0078D4;        /* Windows 11 Blue - Primary actions */
-  --color-primary-dark: #106EBE;   /* Windows 11 Blue Dark - Hover states */
-  --color-primary-light: #4A9EE0;  /* Windows 11 Blue Light - Accents */
+  /* Accent Colors - Steam Inspired */
+  --color-primary: #66c0f4;        /* Steam Blue - Primary actions */
+  --color-primary-dark: #417a9b;   /* Steam Blue Dark - Hover states */
+  --color-primary-light: #8ed4f8;  /* Steam Blue Light - Accents */
 
-  --color-secondary: #8E8CD8;      /* Purple - Secondary gradient */
-  --color-secondary-dark: #7B78C8; /* Purple Dark */
-  --color-secondary-light: #A8A6E8; /* Purple Light */
+  --color-secondary: #5c7e10;      /* Steam Green - Secondary actions */
+  --color-secondary-dark: #4d6b0e; /* Steam Green Dark */
+  --color-secondary-light: #6e9512; /* Steam Green Light */
 
-  --color-accent-cyan: #00B7C3;    /* Cyan - Info highlights */
-  --color-accent-orange: #D83B01;  /* Orange - Warning/Special actions */
+  --color-accent-cyan: #00ccff;    /* Cyan - Info highlights */
+  --color-accent-orange: #ff8c00;  /* Orange - Warning/Special actions */
 
-  /* Colori Testo - Modern Dark/Light */
-  --color-text: #FFFFFF;          /* White for dark backgrounds */
-  --color-text-light: #9CA3AF;    /* Gray-400 for secondary text */
-  --color-text-muted: #6B7280;    /* Gray-500 for tertiary text */
-  --color-text-dark: #1A1A1A;     /* Dark text for light backgrounds */
+  /* Colori Testo - Steam Style */
+  --color-text: #c7d5e0;          /* Steam Gray - Main text */
+  --color-text-light: #8f98a0;    /* Steam Gray Light - Secondary text */
+  --color-text-muted: #5c6873;    /* Steam Gray Muted - Tertiary text */
+  --color-text-dark: #1b2838;     /* Dark text for light backgrounds */
 
-  /* Dark Backgrounds - Windows 11 Dark Mode */
-  --color-bg-primary: #0A0C0F;    /* Dark-950 - Deepest dark */
-  --color-bg-secondary: #111318;  /* Dark-900 - Primary dark */
-  --color-bg-tertiary: #1A1D23;   /* Dark-850 - Medium dark */
-  --color-bg-card: #1F2937;       /* Gray-800 - Card backgrounds */
-  --color-bg-hover: rgba(55, 65, 81, 0.5);  /* Gray-700/50 - Hover state */
-  --color-bg-accent: rgba(0, 120, 212, 0.1); /* Blue tinted background */
+  /* Dark Backgrounds - Steam Dark Mode */
+  --color-bg-primary: #1b2838;    /* Steam Dark - Main background */
+  --color-bg-secondary: #171a21;  /* Steam Darker - Header/Sidebar */
+  --color-bg-tertiary: #16202d;   /* Steam Dark Alt - Cards */
+  --color-bg-card: #16202d;       /* Steam Card Background */
+  --color-bg-hover: rgba(103, 193, 245, 0.1);  /* Steam Blue/10 - Hover state */
+  --color-bg-accent: rgba(102, 192, 244, 0.15); /* Steam Blue tinted background */
 
-  /* Bordi e Divisori - Subtle on dark */
-  --color-border: rgba(75, 85, 99, 0.3);     /* Gray-600/30 */
-  --color-border-dark: rgba(55, 65, 81, 0.5); /* Gray-700/50 */
-  --color-border-light: rgba(107, 114, 128, 0.2); /* Gray-500/20 */
+  /* Bordi e Divisori - Steam subtle borders */
+  --color-border: rgba(42, 71, 94, 0.6);     /* Steam Border - #2a475e/60 */
+  --color-border-dark: rgba(23, 26, 33, 0.8); /* Steam Darker Border */
+  --color-border-light: rgba(92, 104, 115, 0.3); /* Steam Gray Border */
 
   /* Stati */
-  --color-success: #10B981;       /* Green-500 for success */
-  --color-error: #EF4444;         /* Red-500 for errors */
-  --color-warning: #F59E0B;       /* Amber-500 for warnings */
-  --color-info: #3B82F6;          /* Blue-500 for info */
+  --color-success: #5c7e10;       /* Steam Green for success */
+  --color-error: #d94a38;         /* Steam Red for errors */
+  --color-warning: #ffa500;       /* Steam Orange for warnings */
+  --color-info: #66c0f4;          /* Steam Blue for info */
 
-  /* Ombre - Modern with glow effects */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.25);
-  --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.3);
-  --shadow-hover: 0 12px 28px rgba(0, 120, 212, 0.25);  /* Blue glow */
-  --shadow-glow-blue: 0 0 20px rgba(59, 130, 246, 0.3);
-  --shadow-glow-purple: 0 0 20px rgba(142, 140, 216, 0.3);
-  --shadow-inner-soft: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Ombre - Steam with subtle glow effects */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 12px 28px rgba(0, 0, 0, 0.6);
+  --shadow-hover: 0 8px 20px rgba(102, 192, 244, 0.2);  /* Steam Blue glow */
+  --shadow-glow-blue: 0 0 15px rgba(102, 192, 244, 0.4);
+  --shadow-glow-green: 0 0 15px rgba(92, 126, 16, 0.4);
+  --shadow-inner-soft: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 
-  /* Typography - Modern and Professional */
-  --font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  /* Typography - Steam Style (Motiva Sans alternative) */
+  --font-family: 'Roboto', 'Open Sans', 'Segoe UI', -apple-system, system-ui, sans-serif;
   --font-size-xs: 0.75rem;     /* 12px */
   --font-size-sm: 0.875rem;    /* 14px */
   --font-size-base: 1rem;      /* 16px */
@@ -79,18 +79,19 @@
   --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Gradients - Windows 11 Style */
+  /* Gradients - Steam Style */
   --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   --gradient-secondary: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-dark) 100%);
   --gradient-accent: linear-gradient(90deg, var(--color-primary) 0%, var(--color-info) 50%, var(--color-secondary) 100%);
-  --gradient-text: linear-gradient(90deg, #60A5FA 0%, #93C5FD 50%, #A78BFA 100%);
-  --gradient-bg-dark: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 50%, var(--color-bg-tertiary) 100%);
-  --gradient-card: linear-gradient(135deg, rgba(31, 41, 55, 0.5) 0%, rgba(31, 41, 55, 0.3) 100%);
+  --gradient-text: linear-gradient(90deg, #66c0f4 0%, #8ed4f8 50%, #5c7e10 100%);
+  --gradient-bg-dark: linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-bg-primary) 100%);
+  --gradient-card: linear-gradient(135deg, rgba(22, 32, 45, 0.9) 0%, rgba(22, 32, 45, 0.6) 100%);
+  --gradient-overlay: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
 
-  /* Backdrop Blur */
-  --blur-sm: 4px;
-  --blur-md: 8px;
-  --blur-lg: 12px;
+  /* Backdrop Blur - Reduced for Steam style */
+  --blur-sm: 2px;
+  --blur-md: 4px;
+  --blur-lg: 6px;
 
   /* Breakpoints (per riferimento JS) */
   --breakpoint-mobile: 480px;

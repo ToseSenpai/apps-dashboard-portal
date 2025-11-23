@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
-import AppCard from '../AppCard';
+import AppCardHorizontal from '../AppCard/AppCardHorizontal';
 import styles from './AppCardList.module.css';
 
 /**
- * Componente lista di card applicativi con layout grid responsive
+ * Componente lista di card applicativi con layout verticale Steam-style
  * @param {Array} apps - Array di oggetti applicativi
+ * @param {Object} downloadProgress - Progress data per download in corso
+ * @param {Object} installStatus - Status data per installazioni in corso
  */
-const AppCardList = ({ apps }) => {
+const AppCardList = ({ apps, downloadProgress, installStatus }) => {
   if (!apps || apps.length === 0) {
     return (
       <div className={styles.emptyState}>
@@ -21,10 +23,14 @@ const AppCardList = ({ apps }) => {
       className={styles.listContainer}
       aria-label="Lista applicativi aziendali"
     >
-      <ul className={styles.grid} role="list">
+      <ul className={styles.list} role="list">
         {apps.map((app) => (
-          <li key={app.id} className={styles.gridItem}>
-            <AppCard app={app} />
+          <li key={app.id} className={styles.listItem}>
+            <AppCardHorizontal
+              app={app}
+              downloadProgress={downloadProgress?.[app.id]}
+              installStatus={installStatus?.[app.id]}
+            />
           </li>
         ))}
       </ul>
@@ -45,6 +51,8 @@ AppCardList.propTypes = {
       description: PropTypes.string.isRequired,
     })
   ).isRequired,
+  downloadProgress: PropTypes.object,
+  installStatus: PropTypes.object,
 };
 
 export default AppCardList;

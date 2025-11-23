@@ -1,134 +1,110 @@
-/* App Container */
+/* App Container - Steam Two-Column Layout */
 .app-container {
-  min-height: 100vh;
+  display: flex;
+  height: 100vh;
+  background: var(--color-bg-primary);
+  overflow: hidden;
+  animation: fade-in 0.3s ease-out;
+}
+
+/* Content Area (TopNav + Main) */
+.app-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  background: var(--gradient-bg-dark);
-  animation: fade-in 0.5s ease-out;
+  overflow: hidden;
 }
 
-/* Header - Modern Windows 11 Design */
-.app-header {
-  background: linear-gradient(135deg, rgba(0, 120, 212, 0.15) 0%, rgba(142, 140, 216, 0.1) 100%);
-  border-bottom: 1px solid var(--color-border);
-  padding: var(--spacing-2xl) var(--spacing-lg);
-  text-align: center;
-  box-shadow: var(--shadow-md);
-  backdrop-filter: blur(var(--blur-md));
-  -webkit-backdrop-filter: blur(var(--blur-md));
-  position: relative;
-}
-
-.app-header::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 3px;
-  background: var(--gradient-accent);
-  border-radius: var(--radius-full);
-  box-shadow: var(--shadow-glow-blue);
-}
-
-.app-title {
-  font-size: var(--font-size-3xl);
-  font-weight: 700;
-  margin: 0;
-  margin-bottom: var(--spacing-md);
-  background: var(--gradient-text);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: -0.02em;
-  animation: slide-up 0.5s ease-out;
-}
-
-.app-subtitle {
-  font-size: var(--font-size-lg);
-  margin: 0;
-  color: var(--color-text-light);
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  animation: slide-up 0.6s ease-out;
-}
-
-/* Main Content - Modern spacing */
+/* Main Content - Scrollable area */
 .app-main {
   flex: 1;
-  max-width: 1600px;
-  width: 100%;
-  margin: 0 auto;
-  padding: var(--spacing-3xl) var(--spacing-lg);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: var(--spacing-xl);
+  background: var(--color-bg-primary);
 }
 
-/* Footer - Modern glassmorphism */
-.app-footer {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.2) 100%);
-  border-top: 1px solid var(--color-border);
-  padding: var(--spacing-xl);
+/* Empty State - When no search results */
+.app-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3xl);
   text-align: center;
   color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
-  backdrop-filter: blur(var(--blur-sm));
-  -webkit-backdrop-filter: blur(var(--blur-sm));
+  min-height: 400px;
 }
 
-.app-footer p {
+.app-empty-icon {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text-muted);
+  opacity: 0.5;
+}
+
+.app-empty-state h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-light);
+}
+
+.app-empty-state p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
   margin: 0;
-  font-weight: 400;
+}
+
+/* Scrollbar styling for main content */
+.app-main::-webkit-scrollbar {
+  width: 10px;
+}
+
+.app-main::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+
+.app-main::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 5px;
+}
+
+.app-main::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-light);
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .app-header {
-    padding: var(--spacing-lg) var(--spacing-md);
-  }
-
   .app-main {
-    padding: var(--spacing-xl) var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-md);
   }
 }
 
 @media (max-width: 768px) {
-  .app-header {
-    padding: var(--spacing-lg) var(--spacing-md);
-  }
-
-  .app-title {
-    font-size: var(--font-size-xl);
-  }
-
-  .app-subtitle {
-    font-size: var(--font-size-sm);
+  .app-container {
+    flex-direction: column;
   }
 
   .app-main {
-    padding: var(--spacing-lg) var(--spacing-md);
+    padding: var(--spacing-md);
   }
 
-  .app-footer {
-    padding: var(--spacing-md);
-    font-size: var(--font-size-xs);
+  .app-empty-state {
+    min-height: 300px;
+    padding: var(--spacing-xl);
+  }
+
+  .app-empty-icon {
+    font-size: 3rem;
   }
 }
 
 /* Iframe Mode Adjustments */
-body.iframe-mode .app-header {
-  padding: var(--spacing-md) var(--spacing-md);
-  border-bottom-width: 2px;
-}
-
-body.iframe-mode .app-title {
-  font-size: var(--font-size-xl);
-  margin-bottom: var(--spacing-xs);
-}
-
-body.iframe-mode .app-subtitle {
-  font-size: var(--font-size-sm);
+body.iframe-mode .app-container {
+  height: auto;
+  min-height: 100vh;
 }
 
 body.iframe-mode .app-main {
-  padding: var(--spacing-lg) var(--spacing-md);
+  padding: var(--spacing-md);
 }
